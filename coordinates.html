@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#image {
+    height: 350px; 
+    background: url('drawing.jpg') no-repeat center center; 
+    background-size: cover;
+}
+#coordinates {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255,255,255,0.7); /* White background with some transparency */
+    padding: 5px;
+    border-radius: 3px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+    $(document).mousemove(function(e){
+        $('#coordinates').html('x: ' + e.pageX + ' y : ' + e.pageY);
+    });
+});
+</script>
+<title>Mouse Coordinates</title>
+</head>
+<body>
+
+<div id="image">image</div>
+coordinates :
+<div id="coordinates">0</div>
+
+</body>
+</html>
