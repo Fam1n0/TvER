@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 #image {
-    height: 1500px;
+    width: 100%; /* Adjust as per your preference or according to the image aspect ratio */
+    height: 100vh; /* Takes the full viewport height */
     background: url('drawing.jpg') no-repeat center center; 
-    background-size: cover;
+    background-size: contain; /* Makes sure the entire image is visible */
+    position: relative; /* Needed to position the coordinates div inside this div */
 }
 #coordinates {
     position: absolute;
