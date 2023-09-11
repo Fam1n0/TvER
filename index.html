@@ -10,20 +10,22 @@ body {
     background-color: #000;
 }
 
-#image {
-    width: 100%; /* Adjust as per your preference or according to the image aspect ratio */
-    height: 100vh; /* Takes the full viewport height */
-    background: url('drawing.jpg') no-repeat center center; 
-    background-size: contain; /* Makes sure the entire image is visible */
-    position: relative; /* Needed to position the coordinates div inside this div */
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('drawing.jpg');
+    background-size: cover; 
+    background-position: center center; 
+    background-repeat: no-repeat;
 }
 
 #artwork {
     position: absolute;
-    top: 185px; 
-    left: 627px; 
-    width: 161px; 
-    height: 105px; 
+    top: 27.5%; 
+    left: 35%; 
+    width: 41%; 
+    height: 18%; 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
     grid-auto-rows: 10px;
@@ -31,21 +33,22 @@ body {
 }
 
 .cell {
-    width: 10px;
-    height: 10px;
+    width: 100%;  /* Adjusted to fill the grid cell */
+    height: 100%;  /* Adjusted to fill the grid cell */
+    box-sizing: border-box;
     border: 1px solid #333;
 }
 </style>
 <title>Harmonics of Reality</title>
 </head>
 <body>
-<div id="image">
+<div class="container">
     <div id="artwork"></div>
 </div>
 <script>
 const artwork = document.getElementById('artwork');
-const numRows = Math.floor(105 / 10);
-const numCols = Math.floor(161 / 10);
+const numRows = Math.floor(artwork.offsetHeight / 10);
+const numCols = Math.floor(artwork.offsetWidth / 10);
 
 // Creating the Planck Space grid
 for (let i = 0; i < numRows; i++) {
