@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +15,17 @@ body {
     width: 100vw;
     height: 100vh;
     background-image: url('drawing.jpg');
-    background-size: cover;
+    background-size: cover; /* Makes sure your image covers the entire container */
+    background-position: center center; /* Centers the background image */
     background-repeat: no-repeat;
 }
 
 #artwork {
     position: absolute;
     top: 27.25%; 
-    left: 55%; /* Adjust based on the position of the TV in your photo */
-    width: 41%; /* Adjust based on the size of the TV in your photo */
-    height: 18%; /* Adjust based on the size of the TV in your photo */
+    left: 35%; 
+    width: 41%; 
+    height: 18%; 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
     grid-auto-rows: 10px;
